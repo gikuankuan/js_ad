@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ad</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        
+      }
+      .main {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: -10000;
+      }
+      .ad {
+        display: flex;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+      .colse {
+        display: flex;
+        cursor: pointer;
+        position: relative;
+      }
+      .myclose {
+        position: absolute;
+        right:-1rem;
+        top: -1rem;
+
+        font-size: 2rem;
+        border: 3px solid black;
+        border-radius: 50%;
+        line-height: 0;
+        background: #ccc;
+      }
+      .myclose:hover {
+        background: #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ad" onclick="ad()">
+      <div id="close" class="colse">
+        <img
+          src="https://diz36nn4q02zr.cloudfront.net/webapi/images/o/100/100/Activity/14992/e2ba1d45-4318-419e-a201-541dbfe666d1/155923"
+          alt=""
+          style="width:720px;"
+          onclick="adgogo();"
+        />
+        <div class="myclose">
+          <span class="material-icons">cancel </span>
+        </div>
+      </div>
+    </div>
+    <!-- 下廣告業面 -->
+<div class="main">
+    <iframe
+      width="100%"
+      height="100%"
+      src="https://www.youtube.com/embed/Ffm-cXR6jU0?autoplay=1&mute=1"
+      frameborder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe></div>
+    <!-- 主題內容 -->
+    <script>
+      function ad() {
+        document.getElementById("close").style.display = "none";
+      }
+
+      function adgogo() {
+        open(
+          "https://www.btu.com.tw/v2/activity/12902?gclid=CjwKCAjw26H3BRB2EiwAy32zhd3e3opsDipsp0BxacJuZy3YoGQI0B-Dz3iiWde7KkVqEl8iMYP1DxoCBHgQAvD_BwE",
+          "_self"
+        );
+      }
+    </script>
+  </body>
+</html>
