@@ -55,7 +55,7 @@
           src="https://diz36nn4q02zr.cloudfront.net/webapi/images/o/100/100/Activity/14992/e2ba1d45-4318-419e-a201-541dbfe666d1/155923"
           alt=""
           style="width:720px;"
-          onclick="adgogo();"
+          onclick="adgogo()"
         />
         <div class="myclose">
           <span class="material-icons">cancel </span>
@@ -84,6 +84,34 @@
           "_self"
         );
       }
+
+
+      // let dd=new Date();
+      // dd.setTime(dd.getTime()+50000);
+      // document.cookie="kuan=snopy;expires="+dd.toUTCString();
+      // //設定cookie結束時間
+
+      function findcook(name){
+        let ckary=document.cookie.split("; "); //依照條件分割成為一組陣列
+        let ckget = ckary.find((e)=>{
+          return (name + "=" === e.substr(0,name.length + 1));
+      })
+      return (ckget)?true:false;
+      }
+      // function findcook(name){ let ckget = document.cookie.split("; ").find(e=>name + "=" === e.substr(0,name.length + 1)); return (ckget)?true:false; } 
+      //客家寫法
+
+
+      let ckeat=findcook("adwatch");
+      if(!ckeat){ //新訪客
+        let end =new Date();
+        end.setHours(23),end.setMinutes(59),end.setSeconds(59)
+        document.cookie="adwatch=yes;expires="+end.toUTCString();
+      // }else{ //已看過的訪客
+      //   console.log("你已經看過廣告囉！");
+        document.getElementsByClassName("ad")[0].remove();//移除該元素
+      }
+
     </script>
   </body>
 </html>
